@@ -1,0 +1,34 @@
+enable
+configure terminal
+hostname AccSW2
+
+vlan 10
+ name Data
+vlan 20
+ name Voice
+vlan 30
+ name IoT
+vlan 40
+ name Guest
+vlan 99
+ name Management
+exit
+
+interface fa0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport trunk native vlan 99
+exit
+
+interface fa0/2
+ switchport mode access
+ switchport access vlan 20
+exit
+
+interface fa0/3
+ switchport mode access
+ switchport access vlan 40
+exit
+
+end
+write memory
