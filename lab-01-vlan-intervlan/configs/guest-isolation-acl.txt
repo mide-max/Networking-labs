@@ -1,0 +1,19 @@
+enable
+configure terminal
+
+ip access-list extended GUEST-ISOLATION
+ permit udp any any eq 67
+ permit udp any any eq 68
+ deny ip 10.40.0.0 0.0.0.255 10.10.0.0 0.0.0.255
+ deny ip 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255
+ deny ip 10.40.0.0 0.0.0.255 10.30.0.0 0.0.0.255
+ deny ip 10.40.0.0 0.0.0.255 10.99.0.0 0.0.0.255
+ permit ip any any
+exit
+
+! Applied on the router's Guest subinterface (see router-config.txt)
+! interface g0/0.40
+!  ip access-group GUEST-ISOLATION in
+
+end
+write memory
