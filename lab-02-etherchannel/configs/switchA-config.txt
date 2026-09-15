@@ -1,0 +1,24 @@
+enable
+configure terminal
+hostname SwitchA
+
+interface range fa0/1-2
+ channel-group 1 mode active
+exit
+
+interface range fa0/3-4
+ channel-group 2 mode desirable
+exit
+
+interface port-channel 1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+exit
+
+interface port-channel 2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+exit
+
+end
+write memory
