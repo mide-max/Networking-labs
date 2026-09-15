@@ -9,7 +9,7 @@ Each lab folder is self-contained: a README explaining the build and design deci
 ## Labs
 
 1. [VLAN Segmentation & Inter-VLAN Routing](./lab-01-vlan-intervlan/) — router-on-a-stick, 5 VLANs, per-VLAN DHCP, Guest VLAN isolation via ACL
-2. EtherChannel Link Aggregation *(in progress)*
+2. [EtherChannel Link Aggregation](./lab-02-etherchannel/)
 3. Spanning Tree Configuration and Loop Diagnosis *(coming soon)*
 4. Port Security and Access Layer Hardening *(coming soon)*
 5. Single-Area OSPFv2 with Passive Interfaces *(coming soon)*
@@ -28,5 +28,5 @@ Each lab folder is self-contained: a README explaining the build and design deci
 Cisco Packet Tracer, Git/GitHub
 
 ## Contact
-- LinkedIn: https://www.linkedin.com/in/olamide-olajide-363935281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+- LinkedIn: https://www.linkedin.com/in/olamide-olajide-a4a8b8436?utm_source=share_via&utm_content=profile&utm_medium=member_android
 - Email: olamideolajide399@gmail.com
