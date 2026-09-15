@@ -9,7 +9,7 @@ Each lab folder is self-contained: a README explaining the build and design deci
 ## Labs
 
 1. [VLAN Segmentation & Inter-VLAN Routing](./lab-01-vlan-intervlan/) — router-on-a-stick, 5 VLANs, per-VLAN DHCP, Guest VLAN isolation via ACL
-2. [EtherChannel Link Aggregation](./lab-02-etherchannel/)
+2. [EtherChannel Link Aggregation](./lab-02-etherchannel/) — LACP and PAgP bundles with live failover/recovery testing Commit.
 3. Spanning Tree Configuration and Loop Diagnosis *(coming soon)*
 4. Port Security and Access Layer Hardening *(coming soon)*
 5. Single-Area OSPFv2 with Passive Interfaces *(coming soon)*
