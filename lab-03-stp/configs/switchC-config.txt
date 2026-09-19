@@ -1,0 +1,26 @@
+enable
+configure terminal
+hostname SwitchC
+
+spanning-tree mode rapid-pvst
+
+! Trunk to SwitchB (blocked side)
+interface fa0/1
+ switchport mode trunk
+exit
+
+! Trunk to SwitchA (root port)
+interface fa0/2
+ switchport mode trunk
+exit
+
+! PC3 - access port
+interface fa0/3
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+exit
+
+end
+write memory
