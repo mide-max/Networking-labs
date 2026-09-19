@@ -1,0 +1,27 @@
+enable
+configure terminal
+hostname SwitchA
+
+spanning-tree mode rapid-pvst
+spanning-tree vlan 1 priority 4096
+
+! Trunk to SwitchB
+interface fa0/2
+ switchport mode trunk
+exit
+
+! Trunk to SwitchC
+interface fa0/3
+ switchport mode trunk
+exit
+
+! PC1 - access port
+interface fa0/1
+ switchport mode access
+ switchport access vlan 1
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+exit
+
+end
+write memory
