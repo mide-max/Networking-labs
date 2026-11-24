@@ -11,7 +11,8 @@ Each lab folder is self-contained: a README explaining the build and design deci
 1. [VLAN Segmentation & Inter-VLAN Routing](./lab-01-vlan-intervlan/) — router-on-a-stick, 5 VLANs, per-VLAN DHCP, Guest VLAN isolation via ACL
 2. [EtherChannel Link Aggregation](./lab-02-etherchannel/) — LACP and PAgP bundles with live failover/recovery testing Commit.
 3. [Spanning Tree Configuration and Loop Diagnosis](./lab-03-stp/) — Rapid PVST+, root bridge placement, and a live loop induced/diagnosed via Simulation Mode
-4. Port Security and Access Layer Hardening *(coming soon)*
+4. [Port Security and Access Layer Hardening](./lab-04-port-security) — Sticky MAC port security, BPDU Guard, unused port isolation, and DHCP Snooping with live unauthorized-host mitigation.
+
 5. Single-Area OSPFv2 with Passive Interfaces *(coming soon)*
 6. Static and Floating Static Routing *(coming soon)*
 7. IPv6 Addressing and OSPFv3 *(coming soon)*
