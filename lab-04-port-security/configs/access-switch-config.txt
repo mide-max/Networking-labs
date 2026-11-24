@@ -1,0 +1,39 @@
+enable
+configure terminal
+hostname SW1
+
+vlan 10
+ name USERS
+vlan 999
+ name BLACKHOLE
+exit
+
+interface range fa0/3 - 24, gig0/2
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+exit
+
+interface range fa0/1 - 2
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security mac-address sticky
+ switchport port-security violation shutdown
+exit
+
+interface gig0/1
+ switchport mode access
+ switchport access vlan 10
+ ip dhcp snooping trust
+exit
+
+ip dhcp snooping
+ip dhcp snooping vlan 10
+no ip dhcp snooping information option
+
+end
+write memory
